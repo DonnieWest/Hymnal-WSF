@@ -8,13 +8,18 @@ group :production do
   gem 'pg'
 end
 
+gem 'rails_12factor', group: :production
+
 group :devlopment, :test do
  gem 'sqlite3'
+end
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
     gem 'sass-rails'
     gem 'coffee-rails'
     gem 'uglifier'
 end
-
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
