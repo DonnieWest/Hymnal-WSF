@@ -3,16 +3,9 @@ ruby "2.1.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 gem 'rails_12factor', group: :production
-
-group :devlopment, :test do
- gem 'sqlite3'
-end
 
 gem 'less-rails'
 gem 'coffee-rails', '~> 4.0.0'

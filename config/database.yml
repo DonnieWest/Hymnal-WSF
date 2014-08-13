@@ -6,8 +6,18 @@
 #
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: d8t70gqcdf676q
+  username: bojwnpkhnfwbba
+  password: <password>
+  host: postgres://bojwnpkhnfwbba:Hp9ALGiq8fcNb5wPq5bjEPEb5i@ec2-54-204-43-200.compute-1.amazonaws.com:5432/d8t70gqcdf676q
+
+production:
+  adapter: postgresql
+  database: d8t70gqcdf676q
+  username: bojwnpkhnfwbba
+  password: <password>
+  host: postgres://bojwnpkhnfwbba:Hp9ALGiq8fcNb5wPq5bjEPEb5i@ec2-54-204-43-200.compute-1.amazonaws.com:5432/d8t70gqcdf676q
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
