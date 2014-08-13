@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th>Page</th>
       <th>Title</th>
-      <th>Text</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,8 +12,8 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr>
+        <td><%= song.page %></td>
         <td><%= song.title %></td>
-        <td><%= song.text %></td>
         <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
         <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>

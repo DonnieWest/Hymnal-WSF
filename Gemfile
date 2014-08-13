@@ -7,6 +7,11 @@ gem 'pg'
 
 gem 'rails_12factor', group: :production
 
+# Testing Frameworks
+group :development, :test do
+  gem 'sqlite3'
+end
+
 group :assets do
     gem 'sass-rails'
     gem 'coffee-rails'
