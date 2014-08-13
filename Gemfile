@@ -7,11 +7,13 @@ gem 'pg'
 
 gem 'rails_12factor', group: :production
 
-gem 'less-rails'
-gem 'coffee-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+group :assets do
+    gem 'sass-rails'
+    gem 'coffee-rails'
+    gem 'uglifier'
+    gem 'bootstrap-sass'
+end
+gem 'therubyracer'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
