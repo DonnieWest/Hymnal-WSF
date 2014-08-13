@@ -12,12 +12,18 @@ group :production do
   gem 'pg'
 end
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+group :development do
+ gem 'sqlite3', '1.3.5'
+end
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+    gem 'sass-rails', '3.2.4'
+    gem 'coffee-rails', '~> 4.0.0'
+
+    gem 'uglifier', '1.2.3'
+end
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
