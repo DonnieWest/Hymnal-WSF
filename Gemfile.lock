@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:galetahub/ckeditor.git
+  revision: 6d8032b87595c3ffa8e9dfd7d86721ecdc53a3e3
+  specs:
+    ckeditor (4.1.0)
+      mime-types
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +64,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.4.0)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -120,12 +129,14 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootstrap-sass
+  ckeditor!
   coffee-rails
   jbuilder
   jquery-rails
@@ -138,3 +149,4 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier
+  will_paginate

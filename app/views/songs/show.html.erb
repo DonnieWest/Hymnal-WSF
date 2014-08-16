@@ -5,15 +5,8 @@
   <%= @song.page %>
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @song.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @song.text %>
-</p>
+<h1><%= @song.title %></h1>
+<%= @song.text.html_safe %>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>

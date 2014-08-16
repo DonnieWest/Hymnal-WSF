@@ -4,6 +4,10 @@ ruby "2.1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 gem 'pg'
+gem 'will_paginate'
+gem 'jquery-rails'
+
+gem 'ckeditor', :git => 'git@github.com:galetahub/ckeditor.git'
 
 gem 'rails_12factor', group: :production
 
