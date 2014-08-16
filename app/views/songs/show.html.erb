@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to "Previous", :controller => "songs", :action => "show", :page => (@song.page - 1) %>
+Song
+<%= link_to "Next", :controller => "songs", :action => "show", :page => (@song.page + 1) %>
+
 <p>
   <strong>Page:</strong>
   <%= @song.page %>

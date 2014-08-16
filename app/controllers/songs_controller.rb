@@ -10,6 +10,11 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
+    if params.has_key?(:page)
+      @song = Song.find_by_page params[:page]
+    else
+      @song = Song.find params[:id]
+    end
   end
 
   # GET /songs/new
