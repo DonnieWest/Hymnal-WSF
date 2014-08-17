@@ -4,14 +4,12 @@
   <%= link_to "Previous", {:controller => "songs", :action => "show", :page => (@song.page + 1)}, :class => 'btn' %>
   <p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Page:</strong>
-      <%= @song.page %>
-    </p>
-
     <h1><%= @song.title %></h1>
     <%= @song.text.html_safe %>
 
     <%= link_to 'Edit', edit_song_path(@song) %> |
-    <%= link_to 'Back', songs_path %>
+    <%= link_to 'Back', songs_path, :class => 'btn btn-primary'%>
+  <div clas="row">
+    <div class="pull-right">Page <%=@song.page%></div>
+  </div>
 </div>
