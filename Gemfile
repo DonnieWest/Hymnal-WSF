@@ -5,9 +5,6 @@ ruby '2.1.2'
 gem 'rails', '4.1.4'
 gem 'pg'
 gem 'will_paginate'
-
-#gem 'ckeditor', :git => 'https://github.com/ckeditor/ckeditor-releases.git', :branch => 'basic/stable'
-#gem 'ckeditor_rails'
 gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 
 gem 'rails_12factor', group: :production
