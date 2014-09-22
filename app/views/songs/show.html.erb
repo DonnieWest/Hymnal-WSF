@@ -6,20 +6,11 @@
   </div>
   <div class="row">
     <p id="notice"><%= notice %></p>
-  </div>
-  <div class="row">
-    <h1><%= @song.title %></h1>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-xm-4 col-sm-4">
-      <%= raw @song.text %>
-    </div>
+    <%= render partial: 'songs/song', locals: {song: @song} %>
   </div>
   <div class="row">
     <%= link_to 'Edit', edit_song_path(@song) %> |
     <%= link_to 'Back', songs_path, :class => 'btn btn-primary' %>
-  </div>
-  <div class="row">
     <div class="pull-right">Page <%= @song.page %></div>
   </div>
 </div>
