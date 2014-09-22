@@ -6,6 +6,7 @@ gem 'rails', '4.1.4'
 gem 'pg'
 gem 'will_paginate'
 gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
+gem 'newrelic_rpm'
 
 gem 'rails_12factor', group: :production
 

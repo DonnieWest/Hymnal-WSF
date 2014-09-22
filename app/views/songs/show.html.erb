@@ -1,16 +1,16 @@
 <div class="container">
-  <%= link_to "Previous", {:controller => "songs", :action => "show", :page => (@song.page - 1)}, :class => 'btn' %>
-  Song
-  <%= link_to "Previous", {:controller => "songs", :action => "show", :page => (@song.page + 1)}, :class => 'btn' %>
-  <p id="notice"><%= notice %></p>
-
-    <h1><%= @song.title %></h1>
-
-    <%== @song.text %>
-
+  <div class="row">
+    <%= link_to "Previous", {:controller => "songs", :action => "show", :page => (@song.page - 1)}, :class => 'btn' %>
+    Song
+    <%= link_to "Previous", {:controller => "songs", :action => "show", :page => (@song.page + 1)}, :class => 'btn' %>
+  </div>
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+    <%= render partial: 'songs/song', locals: {song: @song} %>
+  </div>
+  <div class="row">
     <%= link_to 'Edit', edit_song_path(@song) %> |
-    <%= link_to 'Back', songs_path, :class => 'btn btn-primary'%>
-  <div clas="row">
-    <div class="pull-right">Page <%=@song.page%></div>
+    <%= link_to 'Back', songs_path, :class => 'btn btn-primary' %>
+    <div class="pull-right">Page <%= @song.page %></div>
   </div>
 </div>
