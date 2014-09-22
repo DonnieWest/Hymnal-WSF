@@ -16,6 +16,8 @@ class SongsController < ApplicationController
     else
       @song = Song.find params[:id]
     end
+
+    redirect_to songs_path if @song.present? == false
   end
 
   # GET /songs/new
