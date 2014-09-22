@@ -14,8 +14,7 @@
         <% @songs.each do |song| %>
           <tr>
             <td class="col-xs-1"><%= song.page %></td>
-            <td class="col-xs-10"><%= link_to song.title, song, :class => 'btn form-control btn-default' %></td>
-            <td class="col-xs-1"><%= link_to 'Edit', edit_song_path(song), :class => 'btn' %></td>
+            <td class="col-xs-8"><%= link_to song.title, song, :class => 'btn form-control btn-default' %></td>
           </tr>
         <% end %>
       </tbody>
@@ -23,5 +22,5 @@
 
     <br>
 
-    <%= link_to 'New Song', new_song_path %>
+    <%= link_to 'New Song', new_song_path, :class => 'btn btn-primary'%>
 </div>
