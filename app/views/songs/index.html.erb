@@ -1,26 +1,24 @@
-<div class="container">
-    <h1>Songs</h1>
+<h1>Songs</h1>
 
-    <table class="table table-condensed table-hover">
-      <thead>
-        <tr>
-          <th>Page</th>
-          <th>Title</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
+<table class="table table-condensed table-hover">
+  <thead>
+  <tr>
+    <th>Page</th>
+    <th>Title</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
 
-      <tbody>
-        <% @songs.each do |song| %>
-          <tr>
-            <td class="col-xs-1"><%= song.page %></td>
-            <td class="col-xs-8"><%= link_to song.title, song, :class => 'btn form-control btn-default' %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <tbody>
+  <% @songs.each do |song| %>
+      <tr>
+        <td class="col-xs-1"><%= song.page %></td>
+        <td class="col-xs-8"><%= link_to song.title, song, :class => 'btn form-control btn-default' %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
 
-    <br>
+<br>
 
-    <%= link_to 'New Song', new_song_path, :class => 'btn btn-primary'%>
-</div>
+<%= link_to 'New Song', new_song_path, :class => 'btn btn-primary' %>
