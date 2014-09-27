@@ -15,6 +15,9 @@
  *= require bootstrap-table.min
  */
 
+.container {
+    max-width: 600px;
+}
 
 body {
     padding-bottom: 60px;
