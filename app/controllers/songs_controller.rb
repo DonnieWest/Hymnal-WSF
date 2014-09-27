@@ -5,7 +5,12 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    if params[:q]
+      @songs = Song.search(params[:q]).order("title ASC")
+    else
+      @songs = Song.all.order('title DESC')
+    end
+    logger.debug ("Total Songs #{@songs.size}")
   end
 
   # GET /songs/1
@@ -17,7 +22,7 @@ class SongsController < ApplicationController
       @song = Song.find params[:id]
     end
 
-    redirect_to songs_path if @song.present? == false
+    redirect_to songs_path unless @song.present?
   end
 
   # GET /songs/new
@@ -70,13 +75,13 @@ class SongsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_song
-      @song = Song.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_song
+    @song = Song.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def song_params
-      params.require(:song).permit(:title, :text, :page)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def song_params
+    params.require(:song).permit(:title, :text, :page)
+  end
 end
