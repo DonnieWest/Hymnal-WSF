@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require ckeditor/init
+//= require bootstrap-table.min
+//= require bootstrap-table-en.min

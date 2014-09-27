@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  helper_method :sort_column, :sort_direction
   before_action :set_song, only: [:show, :edit, :update, :destroy]
   respond_to :html, :xml, :json
 
@@ -83,5 +84,14 @@ class SongsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def song_params
     params.require(:song).permit(:title, :text, :page)
+  end
+
+  private
+  def sort_column
+    params[:sort] || "page"
+  end
+
+  def sort_direction
+    params[:direction] || "asc"
   end
 end
