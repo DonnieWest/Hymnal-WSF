@@ -1,3 +1,4 @@
+<div class="row spacer"></div>
 <div class="container text-center">
   <div class="row">
     <%= link_to "Previous Song", {:controller => "songs", :action => "show", :page => (@song.page - 1)}, :class => 'btn btn-default' %>
@@ -13,3 +14,4 @@
     <%= link_to 'Back', songs_path, :class => 'btn btn-primary' %>
   </div>
 </div>
+<div class="row spacer"></div>
