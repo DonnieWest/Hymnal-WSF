@@ -13,17 +13,6 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-table.min
+ *= require songs
  */
 
-.container {
-    max-width: 600px;
-}
-
-body {
-    padding-bottom: 60px;
-}
-@media (max-width: 979px) {
-    body {
-        padding-bottom: 60px;
-    }
-}
