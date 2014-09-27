@@ -9,9 +9,10 @@
   <div class="row">
     <%= render partial: 'songs/song', locals: {song: @song} %>
   </div>
-  <div class="btn-group">
-    <%= link_to 'Edit', edit_song_path(@song), :class => 'btn btn-warning' %>
-    <%= link_to 'Back', songs_path, :class => 'btn btn-primary' %>
+  <div class="container">
+    <div class="btn-group">
+      <%= link_to 'Edit', edit_song_path(@song), :class => 'btn btn-warning' %>
+      <%= link_to 'Back', songs_path, :class => 'btn btn-primary' %>
+    </div>
   </div>
 </div>
-<div class="row spacer"></div>
