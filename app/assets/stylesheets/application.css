@@ -14,3 +14,13 @@
  *= require_self
  *= require bootstrap-table.min
  */
+
+
+body {
+    padding-bottom: 60px;
+}
+@media (max-width: 979px) {
+    body {
+        padding-bottom: 60px;
+    }
+}
