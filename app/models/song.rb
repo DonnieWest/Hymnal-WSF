@@ -1,8 +1,8 @@
 class Song < ActiveRecord::Base
 
-  # @param [Object] search
-  def self.search(search)
-    search_condition = "%" + search + "%"
-    where('title LIKE ?', search_condition)
+  def self.search(query)
+    # where(:title, query) -> This would return an exact match of the query
+    where("title like ?", "%#{query}%")
   end
+
 end

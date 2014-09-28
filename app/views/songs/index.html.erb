@@ -1,5 +1,10 @@
-<h1>Songs</h1>
-
+<h1>Wellspring Fellowship Songs</h1>
+<%= form_tag(songs_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+    <div class="icon-addon addon-sm">
+      <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Songs by Title" %>
+      <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="title"></label>
+    </div>
+<% end %>
 <table class="table table-condensed table-hover">
   <thead>
   <tr>
