@@ -17,7 +17,7 @@
   <% @songs.each do |song| %>
       <tr>
         <td class="col-xs-1"><%= song.page %></td>
-        <td class="col-xs-8"><%= link_to song.title, song, :class => 'btn form-control btn-default' %></td>
+        <td class="col-xs-8"><%= link_to song.title, song, :class => 'form-control btn btn-primary song-title' %></td>
       </tr>
   <% end %>
   </tbody>
