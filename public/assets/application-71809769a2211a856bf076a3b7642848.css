@@ -1,0 +1,182 @@
+/*
+* bootstrap-table - v1.2.3 - 2014-09-12
+* https://github.com/wenzhixin/bootstrap-table
+* Copyright (c) 2014 zhixin wen
+* Licensed MIT License
+*/
+
+
+.table{margin-bottom:0!important;border-bottom:1px solid #ddd;border-collapse:collapse!important;border-radius:1px}.fixed-table-container{position:relative;clear:both;border:1px solid #ddd;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}.fixed-table-header{overflow:hidden;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0}.fixed-table-body{overflow-x:auto;overflow-y:auto;height:100%}.fixed-table-container table{width:100%}.fixed-table-container thead th{height:0;padding:0;margin:0;border-left:1px solid #ddd}.fixed-table-container thead th:first-child{border-left:none;border-top-left-radius:4px;-webkit-border-top-left-radius:4px;-moz-border-radius-topleft:4px}.fixed-table-container thead th .th-inner{padding:8px;line-height:24px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fixed-table-container tbody td{border-left:1px solid #ddd}.fixed-table-container tbody tr:first-child td{border-top:none}.fixed-table-container tbody td:first-child{border-left:none}.fixed-table-container tbody .selected td{background-color:#f5f5f5}.fixed-table-container .bs-checkbox{text-align:center}.fixed-table-container .bs-checkbox .th-inner{padding:8px 0}.fixed-table-container input[type=checkbox],.fixed-table-container input[type=radio]{margin:0 auto!important}.fixed-table-container .no-records-found{text-align:center}.fixed-table-pagination .pagination,.fixed-table-pagination .pagination-detail{margin-top:10px;margin-bottom:10px}.fixed-table-pagination .pagination a{padding:6px 12px;line-height:1.428571429}.fixed-table-pagination .pagination-info{line-height:34px;margin-right:5px}.fixed-table-pagination .btn-group{position:relative;display:inline-block;vertical-align:middle}.fixed-table-pagination .dropup .dropdown-menu{margin-bottom:0}.fixed-table-pagination .page-list{display:inline-block}.fixed-table-toolbar .columns{margin-left:5px}.fixed-table-toolbar .columns label{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.428571429}.fixed-table-toolbar .bars,.fixed-table-toolbar .columns,.fixed-table-toolbar .search{position:relative;margin-top:10px;margin-bottom:10px;line-height:34px}.fixed-table-pagination li.disabled a{pointer-events:none;cursor:default}.fixed-table-loading{display:none;position:absolute;top:42px;right:0;bottom:0;left:0;z-index:99;background-color:#fff;text-align:center}.fixed-table-body .card-view .title{font-weight:700;display:inline-block;min-width:30%;text-align:left!important}.fixed-table-body thead th .th-inner{box-sizing:border-box}.table td,.table th{vertical-align:middle;box-sizing:border-box}.fixed-table-toolbar .dropdown-menu{text-align:left;max-height:300px;overflow:auto}.btn-group{display:inline-block;margin-left:-1px}.btn-group>.btn-group:last-child>.btn:first-child{border-top-left-radius:0;border-bottom-left-radius:0}.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}.table thead>tr>th{padding:0;margin:0}.pull-right .dropdown-menu{right:0;left:auto}p.fixed-table-scroll-inner{width:100%;height:200px}div.fixed-table-scroll-outer{top:0;left:0;visibility:hidden;width:200px;height:150px;overflow:hidden}
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #666; }
+  a:hover {
+    color: #fff;
+    background-color: #000; }
+
+div.field, div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }
+.btn-primary {
+  background-color: #ADD8E6;
+  border-color: #ADD8E6; }
+
+.btn:hover {
+  background-color: #ADD8E6;
+  border-color: #ADD8E6;
+  color: white; }
+
+.spacer {
+  margin-top: 20px; }
+
+.container {
+  max-width: 600px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5; }
+
+body {
+  margin-top: 20px;
+  margin-bottom: 70px; }
+
+.center-block {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.input-group .icon-addon .form-control {
+  border-radius: 0; }
+
+.icon-addon {
+  position: relative;
+  color: #555;
+  display: block; }
+
+.icon-addon:after,
+.icon-addon:before {
+  display: table;
+  content: " "; }
+
+.icon-addon:after {
+  clear: both; }
+
+.icon-addon.addon-md .glyphicon,
+.icon-addon .glyphicon,
+.icon-addon.addon-md .fa,
+.icon-addon .fa {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  font-size: 14px;
+  width: 20px;
+  margin-left: -2.5px;
+  text-align: center;
+  padding: 10px 0;
+  top: 1px; }
+
+.icon-addon.addon-lg .form-control {
+  line-height: 1.33;
+  height: 46px;
+  font-size: 18px;
+  padding: 10px 16px 10px 40px; }
+
+.icon-addon.addon-sm .form-control {
+  height: 30px;
+  padding: 5px 10px 5px 28px;
+  font-size: 12px;
+  line-height: 1.5; }
+
+.icon-addon.addon-lg .fa,
+.icon-addon.addon-lg .glyphicon {
+  font-size: 18px;
+  margin-left: 0;
+  left: 11px;
+  top: 4px; }
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+  padding-left: 30px;
+  float: left;
+  font-weight: normal; }
+
+.icon-addon.addon-sm .fa,
+.icon-addon.addon-sm .glyphicon {
+  margin-left: 0;
+  font-size: 12px;
+  left: 5px;
+  top: -1px; }
+
+.icon-addon .form-control:focus + .glyphicon,
+.icon-addon:hover .glyphicon,
+.icon-addon .form-control:focus + .fa,
+.icon-addon:hover .fa {
+  color: #2580db; }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+ */
+
+
