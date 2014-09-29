@@ -6,10 +6,12 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    if params[:search]
-      @songs = Song.search(params[:search]).order("title ASC")
+    if params[:search] != ""
+      @songs = Song.search(params[:search]).order("page ASC")
+      logger.debug ("search for songs with param #{params[:search]}")
     else
       @songs = Song.all.order('page ASC')
+      logger.debug("Searching for all songs")
     end
     logger.debug ("Total Songs #{@songs.size}")
   end
