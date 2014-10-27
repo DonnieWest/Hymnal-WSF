@@ -21,7 +21,7 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666;
+    color: #fff;
   }
   &:hover {
     color: #fff;
@@ -33,6 +33,10 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+}
+
+a.btn.btn-default {
+  color: #000000;
 }
 
 #notice {
