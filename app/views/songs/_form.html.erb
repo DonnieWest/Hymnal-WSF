@@ -20,9 +20,15 @@
   </div>
   <div class="field">
     <%= f.label :text %>
-    <%= f.cktext_area :text, :value => @song.text, :id => 'songtext' %>
+    <%= f.text_area :text, :value => @song.text, :id => 'songtext' %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'songtext' );
+</script>
