@@ -24,7 +24,7 @@ class SongsController < ApplicationController
     else
       @song = Song.find params[:id]
     end
-
+    @songs = Song.all.order('page ASC')
     redirect_to songs_path unless @song.present?
   end
 
