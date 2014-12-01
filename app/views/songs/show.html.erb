@@ -1,24 +1,25 @@
 <div class="row-fluid">
-  <h5 class="text-right">Page <%= @song.page %></h5>
-</div>
-
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    All Songs
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <% @songs.each do |s| %>
-        <li role="presentation">
-          <%= link_to s.page + ' - ' + s.title, song_url(s), :role => 'menuitem' %>
-          </li>
-    <% end %>
-  </ul>
+  <button class="btn btn-default">Previous</button>
+  <button class="btn btn-default pull-right">Next</button>
 </div>
 
 <div class="row text-center">
 
   <p id="notice"><%= notice %></p>
+
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      All Songs
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+      <% @songs.each do |s| %>
+          <li role="presentation">
+            <%= link_to s.page + ' - ' + s.title, song_url(s), :role => 'menuitem' %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
 
   <div class="row">
     <%= render partial: 'songs/song', locals: {song: @song} %>
