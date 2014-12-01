@@ -8,6 +8,10 @@ gem 'will_paginate'
 #gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'newrelic_rpm'
 
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
+gem 'sprockets'
+
 gem 'rails_12factor', group: :production
 
 # Testing Frameworks

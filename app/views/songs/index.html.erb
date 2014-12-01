@@ -2,7 +2,7 @@
 <%= form_tag(songs_path, :method => "get", class: "navbar-form", id: "search-form") do %>
     <div class="icon-addon addon-sm">
       <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Songs by Title" %>
-      <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="title"></label>
+      <label for="email" class="fa fa-search" rel="tooltip" title="title"></label>
     </div>
 <% end %>
 <table class="table table-condensed table-hover">
@@ -25,6 +25,7 @@
 
 <div class="row">
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <%= link_to 'New Song', new_song_path, :class => 'btn btn-primary' %>
+    <%= link_to 'New Song', new_song_path, :class => 'btn btn-primary'%>
   </nav>
 </div>
+
