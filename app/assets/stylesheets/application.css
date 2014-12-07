@@ -13,6 +13,4 @@
  *= require_tree .
  *= require_self
  *= require songs
- *= require _bootstrap
- *= require _bootstrap-sprockets
  */

@@ -8,8 +8,6 @@ gem 'will_paginate'
 #gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'newrelic_rpm'
 
-gem 'twitter-bootstrap-rails'
-gem 'sprockets'
 
 gem 'rails_12factor', group: :production
 
@@ -22,8 +20,8 @@ group :assets do
     gem 'sass-rails'
     gem 'coffee-rails'
     gem 'uglifier'
-    gem 'bootstrap-sass'
 end
+
 gem 'therubyracer'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
