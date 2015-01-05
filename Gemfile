@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -7,6 +7,7 @@ gem 'pg'
 gem 'will_paginate'
 #gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'newrelic_rpm'
+gem 'responders'
 
 
 gem 'rails_12factor', group: :production
@@ -14,6 +15,10 @@ gem 'rails_12factor', group: :production
 # Testing Frameworks
 group :development, :test do
   gem 'sqlite3'
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
 end
 
 group :assets do
