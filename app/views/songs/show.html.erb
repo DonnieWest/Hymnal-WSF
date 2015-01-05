@@ -1,31 +1,7 @@
-<div class="row text-center">
-
-  <p id="notice"><%= notice %></p>
-
-  <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-      All Songs
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-      <% @songs.each do |s| %>
-          <li role="presentation">
-            <%= link_to s.page + ' - ' + s.title, song_url(s), :role => 'menuitem' %>
-          </li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="row">
-    <%= render partial: 'songs/song', locals: {song: @song} %>
-  </div>
-
-  <div class="container spacer">
-    <div class="btn-group">
-      <%= link_to 'Edit', edit_song_path(@song), :class => 'btn btn-warning' %>
-      <%= link_to 'Back', songs_path, :class => 'btn btn-primary' %>
-    </div>
-  </div>
-
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
 </div>
-<div class="row spacer"></div>
+<div class="modal-body">
+  ...
+</div>

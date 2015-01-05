@@ -19,13 +19,12 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
-    if params.has_key?(:page)
-      @song = Song.find_by_page params[:page]
-    else
-      @song = Song.find params[:id]
+    @song = Song.find params[:id]
+    # respond_with(@song)
+    respond_to do |format|
+      format.html
+      format.js
     end
-    @songs = Song.all.order('page ASC')
-    redirect_to songs_path unless @song.present?
   end
 
   # GET /songs/new

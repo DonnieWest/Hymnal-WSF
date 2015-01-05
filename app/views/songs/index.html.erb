@@ -1,10 +1,12 @@
-<h1>Wellspring Fellowship Songs</h1>
+<h3>Wellspring Fellowship Songs</h3>
+
 <%= form_tag(songs_path, :method => "get", class: "navbar-form", id: "search-form") do %>
     <div class="icon-addon addon-sm">
       <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Songs by Title" %>
       <label for="email" class="fa fa-search" rel="tooltip" title="title"></label>
     </div>
 <% end %>
+
 <table class="table table-condensed table-hover">
   <thead>
   <tr>
@@ -17,7 +19,7 @@
   <% @songs.each do |song| %>
       <tr>
         <td class="col-xs-1"><%= song.page %></td>
-        <td class="col-xs-8"><%= link_to song.title, song, :class => 'form-control song-title' %></td>
+        <td class="col-xs-11"><%= link_to song.title, song, :class => 'form-control song-title', :data => { :toggle => 'modal', :target => '#myModal', :remote => true} %></td>
       </tr>
   <% end %>
   </tbody>
