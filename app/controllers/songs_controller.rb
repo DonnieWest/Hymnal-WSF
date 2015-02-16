@@ -20,7 +20,8 @@ class SongsController < ApplicationController
   # GET /songs/1.json
   def show
     @song = Song.find params[:id]
-    # respond_with(@song)
+    ::NewRelic::Agent.add_custom_parameters({ song_id: @song.id })
+    ::NewRelic::Agent.add_custom_parameters({ song_title: @song.title })
     respond_to do |format|
       format.html
       format.js
