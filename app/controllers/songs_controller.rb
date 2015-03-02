@@ -6,22 +6,15 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    if params[:search] != ""
-      @songs = Song.search(params[:search]).order("page ASC")
-      logger.debug ("search for songs with param #{params[:search]}")
-    else
-      @songs = Song.all.order('page ASC')
-      logger.debug("Searching for all songs")
-    end
-    logger.debug ("Total Songs #{@songs.size}")
+    (params[:search] != '') ? @songs = Song.search(params[:search]).order('page ASC') : @songs = Song.order(page: :asc)
   end
 
   # GET /songs/1
   # GET /songs/1.json
   def show
-    @song = Song.find params[:id]
-    ::NewRelic::Agent.add_custom_parameters({ song_id: @song.id })
-    ::NewRelic::Agent.add_custom_parameters({ song_title: @song.title })
+    @song = Song.find(params[:id])
+    ::NewRelic::Agent.add_custom_parameters({ song_id: @song.id, song_title: @song.title })
+    # ::NewRelic::Agent.add_custom_parameters({ song_title: @song.title })
     respond_to do |format|
       format.html
       format.js
