@@ -1,3 +1,11 @@
+@-ms-viewport {
+    width: auto;
+}
+
+html,body {
+    -ms-overflow-style: none !important;
+}
+
 .modal {
     overflow-y:auto;
     max-height:90%;
