@@ -11,7 +11,3 @@ body.modal-open {
     overflow: hidden;
 }
 
-.modal {
-    overflow: hidden;
-    height: 100%;
-}
