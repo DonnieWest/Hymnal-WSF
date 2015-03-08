@@ -7,10 +7,11 @@ html,body {
     margin-bottom: 20%;
 }
 
-/*.modal {*/
-    /*overflow-y:auto;*/
-    /*position: absolute;*/
-    /*z-index: 1050;*/
-    /*padding-bottom: 80px;*/
-    /*max-height: 420px;*/
-/*}*/
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    overflow: hidden;
+    height: 100%;
+}

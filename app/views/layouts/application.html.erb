@@ -10,7 +10,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="page-container">
   <div class="container">
 
     <%= yield %>
@@ -34,12 +33,19 @@
   <script type="text/javascript">
       $(document).ready(ajustamodal);
       $(window).resize(ajustamodal);
+
       function ajustamodal() {
           var altura = $(window).height() - 155; //value corresponding to the modal heading + footer
           $(".ativa-scroll").css({"height": altura, "overflow-y": "auto"});
       }
+
+      $("#myModal").on("show", function () {
+          $("body").addClass("modal-open");
+      }).on("hidden", function () {
+          $("body").removeClass("modal-open")
+      });
+
   </script>
-</div>
 
 </body>
 </html>
