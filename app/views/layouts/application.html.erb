@@ -9,10 +9,19 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body style="padding-bottom: 70px">
+<body>
 <div class="container">
+
   <%= yield %>
-  <%=render partial: 'shared/modal'%>
+
+</div>
+<%= render partial: 'shared/modal' %>
+<div class="container">
+  <div class="row">
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <%= link_to 'New Song', new_song_path, :class => 'btn btn-primary' %>
+    </nav>
+  </div>
 </div>
 
 
