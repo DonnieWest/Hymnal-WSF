@@ -1,26 +1,28 @@
 <h3>Wellspring Fellowship Songs</h3>
-
-<%= form_tag(songs_path, :method => "get", class: "navbar-form", id: "search-form") do %>
-    <div class="icon-addon addon-sm">
-      <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Songs by Title" %>
-      <label for="email" class="fa fa-search" rel="tooltip" title="title"></label>
-    </div>
-<% end %>
-
-<table class="table table-condensed table-hover">
-  <thead>
-  <tr>
-    <th>#</th>
-    <th>Song Title</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @songs.each do |song| %>
-      <tr>
-        <td class="col-xs-1"><%= song.page %></td>
-        <td class="col-xs-11"><%= link_to song.title, song, :class => 'form-control song-title', :data => { :toggle => 'modal', :target => '#myModal', :remote => true} %></td>
-      </tr>
+<div class="row-fluid">
+  <%= form_tag(songs_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+      <div class="icon-addon addon-sm">
+        <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Songs by Title" %>
+        <label for="email" class="fa fa-search" rel="tooltip" title="title"></label>
+      </div>
   <% end %>
-  </tbody>
-</table>
+</div>
+<div class="row">
+  <table class="table table-condensed table-hover">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Song Title</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @songs.each do |song| %>
+        <tr>
+          <td class="col-xs-1"><%= song.page %></td>
+          <td class="col-xs-11"><%= link_to song.title, song, :class => 'form-control song-title', :data => {:toggle => 'modal', :target => '#myModal', :remote => true} %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
