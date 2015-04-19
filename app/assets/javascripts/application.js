@@ -62,3 +62,4 @@ $(document).on('input', '.clearable', function(){
 }).on('click', '.onX', function(){
     $(this).removeClass('x onX').val('').change();
 });
+
