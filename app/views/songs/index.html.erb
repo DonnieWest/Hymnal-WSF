@@ -2,7 +2,7 @@
 <div class="row-fluid">
   <%= form_tag(songs_path, :method => "get", class: "navbar-form", id: "search-form") do %>
       <div class="icon-addon addon-md">
-        <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Songs by Title" %>
+        <%= text_field_tag :search, params[:search], class: "form-control clearable", placeholder: "Search Songs by Title" %>
         <label for="email" class="fa fa-search" rel="tooltip" title="title"></label>
       </div>
   <% end %>

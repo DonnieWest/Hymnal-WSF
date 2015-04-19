@@ -8,7 +8,7 @@ gem 'will_paginate'
 #gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'newrelic_rpm'
 gem 'responders'
-
+gem 'less-rails', '~> 2.6.0'
 
 gem 'rails_12factor', group: :production
 

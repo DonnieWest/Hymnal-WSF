@@ -13,6 +13,6 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-table.min
- *= require bootstrap-theme.min
+ *= require theme
  *= require hymnal-custom
  */
