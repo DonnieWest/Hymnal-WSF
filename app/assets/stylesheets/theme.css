@@ -6711,9 +6711,11 @@ h6 {
 }
 .table a {
     text-decoration: none;
+    background-color: #c0c6cc;
 }
 .table a:hover {
-    color: inherit;
+    color: #7a8288;
+    background-color: #c0c6cc;
 }
 .table .success,
 .table .warning,
