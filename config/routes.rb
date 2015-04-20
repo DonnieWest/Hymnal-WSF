@@ -1,9 +1,24 @@
 Rails.application.routes.draw do
+  # get 'writer/new'
+  #
+  # get 'writer/create'
+  #
+  # get 'writer/update'
+  #
+  # get 'writer/edit'
+  #
+  # get 'writer/destroy'
+  #
+  # get 'writer/index'
+  #
+  # get 'writer/show'
+
   #get 'welcome/index'
   root to: "songs#index"
 
   resources :songs
 
+  resources :writer
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

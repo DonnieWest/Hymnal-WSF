@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150302211931) do
+ActiveRecord::Schema.define(version: 20150420153430) do
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.integer  "bootsy_resource_id"
@@ -33,8 +33,20 @@ ActiveRecord::Schema.define(version: 20150302211931) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "page",       limit: 255
+    t.integer  "writer_id"
   end
 
   add_index "songs", ["page"], name: "index_songs_on_page"
+  add_index "songs", ["writer_id"], name: "index_songs_on_writer_id"
+
+  create_table "writers", force: :cascade do |t|
+    t.string   "name"
+    t.text     "details"
+    t.integer  "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "writers", ["song_id"], name: "index_writers_on_song_id"
 
 end

@@ -1,6 +1,22 @@
 $modal = $('.modal'),
         $modalBody = $('.modal .modal-body'),
         $modalHeading = $('.modal .modal-heading');
-        $modalHeading.html("<p class=\"text-left\"><%=@song.title %></p> <h4 class=\"text-left\"><%=@song.page%></h4>");
+        $modalHeading.html("<p id=\"song_title\" class=\"text-left\"><%=@song.title %></p> <h4 class=\"text-left\"><%=@song.page%></h4>");
         $modalBody.html("<%= escape_javascript(render @song) %>");
         $modal.modal();
+
+$('#show_toggle').click(function() {
+    $.ajax({
+        url: "/writer/" + $('#writer_id').text(),
+        type: 'GET',
+        contentType: "application/json; charset=utf-8",
+        success: function (result) {
+            console.log (result);
+            if (result != null)
+            {
+                $( "#toggle").html(result.name).toggle( "fold" );
+            }
+        }
+    });
+
+});

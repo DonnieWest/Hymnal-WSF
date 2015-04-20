@@ -1,4 +1,6 @@
-<i id="show_toggle" class="fa fa-chevron-down">About</i>
+<% unless @song.writer.nil? %>
+    <div id="writer_id" style="display: none"><%=@song.writer.id%></div>
+    <i id="show_toggle" class="fa fa-chevron-down">About</i>
+<% end %>
 <div id="toggle" style="display:none"></div>
 <%= raw @song.text %>
-<div class="clear"></div>
