@@ -1,2 +1,27 @@
-<h1>Writer#edit</h1>
-<p>Find me in app/views/writer/edit.html.erb</p>
+<h1>Edit <%=@writer.name%></h1>
+
+<%= form_for @writer do |f| %>
+    <% if @writer.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@writer.errors.count, "error") %> prohibited this song from being saved:</h2>
+
+          <ul>
+            <% @writer.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :details %>
+      <%= f.text_area :details, :value => @writer.details, :class => 'form-control' %>
+    </div>
+    <div class="btn btn-primary">
+      <%= f.submit %>
+    </div>
+<% end %>
+

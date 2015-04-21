@@ -13,6 +13,7 @@
     <tr>
       <th>#</th>
       <th>Song Title</th>
+      <th>Writer</th>
     </tr>
     </thead>
 
@@ -20,7 +21,8 @@
     <% @songs.each do |song| %>
         <tr>
           <td class="col-xs-1"><%= song.page %></td>
-          <td class="col-xs-11"><%= link_to song.title, song, :class => 'form-control song-title', :data => {:toggle => 'modal', :target => '#myModal', :remote => true} %></td>
+          <td class="col-xs-9"><%= link_to song.title, song, :class => 'form-control song-title', :data => {:toggle => 'modal', :target => '#myModal', :remote => true} %></td>
+          <td class="col-xs-2"><%= song.writer.name unless song.writer.nil?%></td>
         </tr>
     <% end %>
     </tbody>

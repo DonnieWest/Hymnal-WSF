@@ -47,19 +47,24 @@ function enable_scroll() {
 
 $(function () {
     // disable page scrolling when modal is shown
-    $(".modal").on('show', function () { disable_scroll(); });
+    $(".modal").on('show', function () {
+        disable_scroll();
+    });
     // enable page scrolling when modal is hidden
-    $(".modal").on('hide', function () { enable_scroll(); });
+    $(".modal").on('hide', function () {
+        enable_scroll();
+    });
 });
 
 
 // CLEARABLE INPUT
-function tog(v){return v?'addClass':'removeClass';}
-$(document).on('input', '.clearable', function(){
+function tog(v) {
+    return v ? 'addClass' : 'removeClass';
+}
+$(document).on('input', '.clearable', function () {
     $(this)[tog(this.value)]('x');
-}).on('mousemove', '.x', function( e ){
-    $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
-}).on('click', '.onX', function(){
+}).on('mousemove', '.x', function (e) {
+    $(this)[tog(this.offsetWidth - 18 < e.clientX - this.getBoundingClientRect().left)]('onX');
+}).on('click', '.onX', function () {
     $(this).removeClass('x onX').val('').change();
 });
-

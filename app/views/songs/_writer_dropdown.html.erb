@@ -1,0 +1,12 @@
+<% if song.writer.nil? %>
+    <div class="btn-group">
+      <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Action
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+
+      </ul>
+    </div>
+<% else %>
+    <%= song.writer.name %>
+<% end %>

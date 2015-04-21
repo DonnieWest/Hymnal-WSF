@@ -10,15 +10,15 @@
           </ul>
         </div>
     <% end %>
-    <div class="field">
+    <div class="form-group">
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, :class => 'form-control' %>
     </div>
-    <div class="field">
+    <div class="form-group">
       <%= f.label :details %>
-      <%= f.text_area :details, :value => @writer.details %>
+      <%= f.text_area :details, :value => @writer.details, :class => 'form-control' %>
     </div>
-    <div class="actions">
+    <div class="btn btn-primary">
       <%= f.submit %>
     </div>
 <% end %>
