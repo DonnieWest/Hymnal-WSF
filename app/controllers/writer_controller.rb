@@ -1,4 +1,5 @@
 class WriterController < ApplicationController
+  before_filter :authenticate_user!, except: [ :index, :show ]
   respond_to :json, :html
 
   def new

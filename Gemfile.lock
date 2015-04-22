@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     awesome_print (1.6.1)
+    bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -66,6 +67,13 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
     debugger-linecache (1.2.0)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -148,6 +156,7 @@ GEM
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -252,6 +261,8 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     will_paginate (3.0.7)
 
 PLATFORMS
@@ -262,6 +273,7 @@ DEPENDENCIES
   better_errors
   byebug
   coffee-rails
+  devise
   factory_girl_rails
   faker
   guard

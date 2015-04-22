@@ -5,8 +5,9 @@ ruby '2.2.0'
 gem 'rails'
 gem 'pg'
 gem 'will_paginate'
-#gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
+# gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'newrelic_rpm'
+gem 'devise'
 gem 'responders'
 gem 'less-rails', '~> 2.6.0'
 
