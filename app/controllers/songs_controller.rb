@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
   helper_method :sort_column, :sort_direction
   before_action :set_song, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
   respond_to :html, :xml, :json
 
   # GET /songs
