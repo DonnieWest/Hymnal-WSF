@@ -257,7 +257,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :google_oauth2, '484005390907-et8ve8lfv6m6tp2rrqcmgbp80853qj6v.apps.googleusercontent.com', 'HryE3_2MSmsNbgubGS2cKC8Y'
+  config.omniauth :google_oauth2, ENV['GOOGLE_AUTH_CLIENT_ID'],  ENV['GOOGLE_AUTH_CLIENT_SECRET']
   {
       :approval_prompt => '',
       :access_type => 'online',
