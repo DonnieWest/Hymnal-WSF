@@ -4,6 +4,7 @@ ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 gem 'devise'
+gem 'lograge'
 gem 'pg'
 gem 'will_paginate'
 gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
