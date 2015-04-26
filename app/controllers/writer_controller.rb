@@ -1,5 +1,7 @@
 class WriterController < ApplicationController
-  before_filter :authenticate_user!, except: [ :index, :show ]
+  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:index, :show, :edit, :update, :destroy]
+
   respond_to :json, :html
 
   def new

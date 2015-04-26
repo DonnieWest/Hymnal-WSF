@@ -1,17 +1,18 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:edit, :update, :destroy]
 
-      # GET /users/:id.:format
-      def show
-        # authorize! :read, @user
-      end
+  # GET /users/:id.:format
+  def show
+    # authorize! :read, @user
+  end
 
-      # GET /users/:id/edit
+  # GET /users/:id/edit
   def edit
     # authorize! :update, @user
   end
 
-      # PATCH/PUT /users/:id.:format
+  # PATCH/PUT /users/:id.:format
   def update
     # authorize! :update, @user
     respond_to do |format|
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
     end
   end
 
-      # GET/PATCH /users/:id/finish_signup
+  # GET/PATCH /users/:id/finish_signup
   def finish_signup
     # authorize! :update, @user
     if request.patch? && params[:user] #&& params[:user][:email]
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
     end
   end
 
-      # DELETE /users/:id.:format
+  # DELETE /users/:id.:format
   def destroy
     # authorize! :delete, @user
     @user.destroy
@@ -56,8 +57,8 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    accessible = [ :name, :email ] # extend with your own params
-    accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
+    accessible = [:name, :email] # extend with your own params
+    accessible << [:password, :password_confirmation] unless params[:user][:password].blank?
     params.require(:user).permit(accessible)
   end
 end
